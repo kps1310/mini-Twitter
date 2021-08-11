@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fascinate+Inline&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.4;
+  font-family: "Roboto", sans-serif;
+  overflow-y: scroll;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+input,
+textarea,
+button {
+  font-family: "Roboto", sans-serif;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.logo {
+  font-weight: bold;
+  color: #2393f5;
+  font-size: 2rem;
+  font-family: "Fascinate Inline", cursive;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: #1b86e4;
+}
+
+#sign-text {
+  font-size: 0.9rem;
+  color: #878787;
+  margin-top: 30px;
+}
+
+// Home Page Layout
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 100px;
+  padding: 0;
+
+  #newTweet {
+    width: 100%;
+    height: 1px;
+    transform: translateY(-120px);
+  }
+
+  @media (max-width: 1180px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 600px;
+    flex: auto;
+  }
+
+  .homeSearch {
+    display: none;
+
+    @media (max-width: 900px) {
+      transition: 0.2s all;
+      display: block;
+      position: sticky;
+      top: 0;
+      height: 0;
+    }
+  }
+}
+
+ul.navbar {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.profilePic {
+  overflow: hidden;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
